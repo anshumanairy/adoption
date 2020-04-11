@@ -1009,6 +1009,13 @@ section
 	color: black;
 	line-height: 1.16;
 }
+.avds_title1
+{
+	font-size: 48px;
+	font-weight: 600;
+	color: white;
+	line-height: 1.16;
+}
 .avds_link
 {
 	margin-top: 18px;
@@ -1064,6 +1071,15 @@ section
 	font-size: 14px;
 	font-weight: 400;
 	color: black;
+	line-height: 2.14;
+	margin-top: 11px;
+	padding-left: 2px;
+}
+.avds_text1
+{
+	font-size: 14px;
+	font-weight: 400;
+	color: white;
 	line-height: 2.14;
 	margin-top: 11px;
 	padding-left: 2px;
