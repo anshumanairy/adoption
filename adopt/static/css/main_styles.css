@@ -1040,6 +1040,25 @@ section
 	background: black;
 	content: '';
 }
+.avds_link1 a
+{
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	color: white;
+}
+.avds_link1 a::after
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background: white;
+	content: '';
+}
 
 /* Ad Large */
 
