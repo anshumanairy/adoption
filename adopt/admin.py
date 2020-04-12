@@ -1,3 +1,7 @@
 from django.contrib import admin
+from adopt.models.register_model import user_detail
+from django.contrib.auth.models import Permission
+from django.contrib import admin
 
-# Register your models here.
+admin.site.register(Permission)
+admin.site.register(user_detail)

@@ -1,0 +1,25 @@
+Things to Do: Project Adoption:
+- [ ] Pagination in respective dogs and cats pages.
+- [ ] Login/Sign Up/OTP
+- [ ] My Profile
+- [ ] My Published Ads
+- [ ] Whole Process of publishing an adoption ad after sign in
+- [ ] Like and comment option for each pet
+- [ ] Chat
+- [ ] Filters 
+- [ ] Sorting
+- [ ] Offers - Get free pet food with this specific adoption
+- [ ] Deals
+- [ ] Donate Us
+- [ ] Donate for a specific pet
+- [ ] NGO Listing and Contacts
+- [ ] Home Inspection on Accepting Adoption
+- [ ] Complaints
+- [ ] Pet Rescue Petition - Needs Google Maps
+- [ ] Successful Rescues
+- [ ] Server to store images of pets securely
+- [ ] Replace maps in contacts page with google maps
+- [ ] Elastic Search or Any other
+- [ ] Logo for the Website and svg for tab bar logo
+- [ ] Setting up the backend for newsletter subscription
+- [ ] Add Loader
