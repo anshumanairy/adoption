@@ -20,16 +20,24 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.models import Permission
 from django.utils.timezone import utc
 from django.utils import timezone
-from adopt.forms.register_forms import UserForm, registerform
+from adopt.forms.register_forms import UserForm, profileForm
+from adopt.models.register_model import user_detail
 
 
 def reg(request):
     if request.method == 'POST':
-        user_form = UserForm(data=request.POST)
-        profile_form = registerform(data=request.POST)
-        if user_form.is_valid() and profile_form.is_valid():
-            user = user_form.save(commit=False)
-            temp = user.username
-            profile_form.instance.user_name= temp
-            profile = profile_form.save(commit=False)
+        if 'register_button' in request.POST:
+            user_form = UserForm(request.POST)
+            profile_form = profileForm(request.POST)
+            if user_form.is_valid() and profile_form.is_valid():
+                user = user_form.save(commit=False)
+                profile = profile_form.save(commit=False)
+                profile.user = user
+                user.email = profile.email
+                user.save()
+                profile.save()
+                return redirect('home')
+    else:
+        user_form = UserForm()
+        profile_form = profileForm()
     return render(request,'register.html/',{'user_form':user_form , 'profile_form':profile_form})

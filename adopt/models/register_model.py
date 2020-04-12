@@ -9,10 +9,10 @@ gender = (
 
 class user_detail(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    user_name = models.CharField(max_length=150)
     name = models.CharField(max_length=20)
-    gender = models.CharField(max_length=6, choices=gender, default="Gender")
+    gender = models.CharField(max_length=6, choices=gender)
     phone = models.CharField(max_length=10)
+    email = models.EmailField(max_length=20)
 
     def __str__(self):
         return self.user.email
