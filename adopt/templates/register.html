@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Register</title>
+    <title>Adoption</title>
 
     <link href="/static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="/static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
@@ -21,31 +21,31 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Register</h2>
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data" id="regform">
+                        {% csrf_token %}
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                            {{ profile_form.name}}
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
-                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                            {{ user_form.username }}
                         </div>
                         <div class="input-group">
+                            {{ user_form.password }}
+                        </div>
+                        <div class="input-group">
+                            {{ user_form.email }}
+                        </div>
+                        <div class="input-group">
+                            {{ profile_form.phone }}
+                        </div>
+                        <!-- <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="gender">
-                                    <option disabled="disabled" selected="selected">Gender</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
+                                    <option>{{ profile_form.gender }}</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="email">
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
-                        </div>
+                        </div> -->
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green" type="submit">Submit</button>
                         </div>

@@ -22,3 +22,4 @@ Things to Do: Project Adoption:
 - [ ] Elastic Search or Any other
 - [ ] Logo for the Website and svg for tab bar logo
 - [ ] Setting up the backend for newsletter subscription
+- [ ] Add Loader
